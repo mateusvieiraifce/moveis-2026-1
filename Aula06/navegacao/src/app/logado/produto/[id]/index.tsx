@@ -1,5 +1,5 @@
 import { Link, useLocalSearchParams } from "expo-router";
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native"
 
 import { useEffect, useState } from "react";
 import api from "../../../service/api";
@@ -30,15 +30,24 @@ export default function Products() {
 
   const { id } = useLocalSearchParams()
  
+  
   return (<View style={styles.container}>
 
 
     <Text style={{ color: "#fff", fontWeight: "bold" }}> Produtos {id}</Text>
     <Link href="/"> voltar </Link>
     {produtos.map((item) => (
-      <Text key={item.id}>{item.id} - {item.nome}
+      <View key={item.id}>
+        
+        <TouchableOpacity onPress={(a)=>{
+          Alert.alert("IFCE","teste")
+          console.log(item.id);
+
+        }}>
+        <Text>{item.nome}</Text>  
+        </TouchableOpacity>
+      </View>      
       
-      </Text>
     )
     )}
 
