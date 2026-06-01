@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL:"http://192.168.11.18:3000/v1",
+    baseURL:"https://dig-huntress-arming.ngrok-free.dev/v1",
     timeout:10000,
     headers:{
         "Content-Type":"application/json",
