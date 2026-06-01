@@ -31,6 +31,21 @@ export default function Layout() {
             }} >
 
             </Tabs.Screen>
+            <Tabs.Screen name="produto/[id]/update" options={{
+                href: null,
+                title: 'ProdutosUpdate',
+                tabBarIcon: ({ color, focused }) => (
+                    <Ionicons name={focused ? 'logo-amazon' : 'logo-amazon'} size={28} color={color} />
+                ),
+            }} ></Tabs.Screen>
+
+            <Tabs.Screen name="produto/[id]/new" options={{
+                href: null,
+                title: 'Novo Produto',
+                tabBarIcon: ({ color, focused }) => (
+                    <Ionicons name={focused ? 'logo-amazon' : 'logo-amazon'} size={28} color={color} />
+                ),
+            }} ></Tabs.Screen>
 
              <Tabs.Screen name="fornecedor" options={{
                 title: 'Fonecedor',
